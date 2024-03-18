@@ -15,6 +15,14 @@ public class CarreraPlayer extends Player {
 
     @Override
     protected boolean shouldFold() {
+        if (isBetActive()) {
+            if (getGameState().getNumRoundStage() == 1) {
+                int temp = getHandCards().get(0).getValue() - getHandCards().get(1).getValue();
+                if (!(temp < -3 || temp > 3)) {
+
+                }
+            }
+        }
         return false;
     }
 
